@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Natural Shine Herbal Hair Oil</title>
-  
+
   <!-- Font Awesome CDN for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-dT5A7NqZqW0KUo3QWb5u9c6rKqz5G4nA/UbA9q7xX7swV+hU6r6nB3TFTfGqV0BtlDQJ14YXW2q5mF3I6+8Xw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-dT5A7NqZqW0KUo3QWb5u9c6rKqz5G4nA/UbA9q7xX7swV+hU6r6nB3TFTfGqV0BtlDQJ14YXW2q5mF3I6+8Xw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&display=swap" rel="stylesheet">
 
   <style>
@@ -18,17 +21,28 @@
       color: #333;
       scroll-behavior: smooth;
     }
-    a { text-decoration: none; }
+
+    a {
+      text-decoration: none;
+    }
 
     /* Header / Hero Section */
     header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/herbal.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/herbal.jpg') center/cover no-repeat;
       color: #fff;
       text-align: center;
       padding: 100px 20px;
     }
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
     .btn {
       display: inline-block;
       padding: 12px 25px;
@@ -39,11 +53,21 @@
       font-weight: bold;
       transition: 0.3s;
     }
-    .btn:hover { background: #388e3c; }
+
+    .btn:hover {
+      background: #388e3c;
+    }
 
     /* Section */
-    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-    section h2 { margin-bottom: 40px; }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      margin-bottom: 40px;
+    }
 
     /* Features */
     .features {
@@ -52,37 +76,44 @@
       gap: 30px;
       text-align: center;
     }
+
     .features div {
       background: #f9f9f9;
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .features div:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     }
 
     /* Gallery */
-    .gallery, .feedback-gallery {
+    .gallery,
+    .feedback-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
-    .gallery img, .feedback-gallery img {
+
+    .gallery img,
+    .feedback-gallery img {
       width: 100%;
       height: 250px;
       object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .gallery img:hover, .feedback-gallery img:hover {
+
+    .gallery img:hover,
+    .feedback-gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
     }
 
     /* Testimonials */
@@ -91,6 +122,7 @@
       padding: 50px 20px;
       text-align: center;
     }
+
     .testimonial {
       max-width: 600px;
       margin: 20px auto;
@@ -102,21 +134,28 @@
       display: none;
       position: fixed;
       z-index: 9999;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
       justify-content: center;
       align-items: center;
       transition: opacity 0.4s;
     }
-    .lightbox-overlay.show { display: flex; }
+
+    .lightbox-overlay.show {
+      display: flex;
+    }
+
     .lightbox-overlay img.lightbox-img {
       max-width: 90%;
       max-height: 90%;
       border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       animation: fadeIn 0.3s ease-in-out;
     }
+
     .lightbox-overlay .close {
       position: absolute;
       top: 30px;
@@ -127,23 +166,39 @@
       font-weight: bold;
       transition: color 0.2s;
     }
-    .lightbox-overlay .close:hover { color: #4caf50; }
+
+    .lightbox-overlay .close:hover {
+      color: #4caf50;
+    }
 
     @keyframes fadeIn {
-      from {opacity:0; transform: scale(0.95);}
-      to {opacity:1; transform: scale(1);}
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
+
     .promotional-text {
-    font-family: 'Noto Sans Sinhala', sans-serif;
-    font-size: 1rem;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: auto;
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
+      font-family: 'Noto Sans Sinhala', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: auto;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .fb-btn:hover {
+      background: #145dbf;
+    }
+
 
 
     /* Footer */
@@ -154,27 +209,32 @@
       padding: 20px;
       font-size: 0.9rem;
     }
+
     .social-icons {
       margin-top: 10px;
     }
+
     .social-icons a {
       color: #fff;
       font-size: 1.5rem;
       margin: 0 10px;
       transition: color 0.3s;
     }
-    .social-icons a:hover { color: #4caf50; }
 
+    .social-icons a:hover {
+      color: #4caf50;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Hero Section -->
   <header>
     <h1>Natural Shine Herbal Hair Oil</h1>
     <p>For Stronger, Shinier & Healthier Hair – Naturally</p>
-    <a href="https://wa.me/94711907737?text=Hi%20I%20am%20interested%20in%20buying%20Natural%20Shine%20Herbal%20Hair%20Oil" 
-       class="btn" target="_blank">Buy Now on WhatsApp</a>
+    <a href="https://wa.me/94711907737?text=Hi%20I%20am%20interested%20in%20buying%20Natural%20Shine%20Herbal%20Hair%20Oil"
+      class="btn" target="_blank">Buy Now on WhatsApp</a>
   </header>
 
   <!-- Features Section -->
@@ -196,16 +256,31 @@
     </div>
   </section>
 
-<!-- Ingredients Section -->
-<section>
-  <h2 style="text-align:center;">🌿 Ingredients Used 🌿</h2>
-  <div class="herbal-ingredients" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; line-height: 1.8; font-size: 1rem; max-width: 900px; margin: auto;">
-    <p>🌿 කරපිංචා<br>🌿 කොහොඹ කොළ<br>🌿 උලුහාල්<br>🌿 ගොටුකොළ<br>🌿 මුකුණුවැන්න<br>🌿 දී කිරිදිය<br>🌿 නිල් අවරිය<br>🌿 නෙල්ලි<br>🌿 තල</p>
-    <p>🌿 කලුදුරු<br>🌿 තැබිලි තෙල්<br>🌿 කරාබු නැටි<br>🌿 පෙර කොළ<br>🌿 බුලත්<br>🌿 වද මල්<br>🌿 කොමාරිකා<br>🌿 පොල්<br>🌿 පොල් තෙල්<br>🌿 සැවැන්දරා</p>
-  </div>
-</section>
+  <!-- Ingredients Section -->
+  <section>
+    <h2 style="text-align:center; margin-bottom:40px;">🌿 Ingredients Used 🌿</h2>
+    <div class="herbal-ingredients"
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: auto;">
 
-  
+      <!-- Card 1 -->
+      <div
+        style="background:#f9f9f9; padding:20px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); line-height:1.8; font-size:1rem; font-family:'Noto Sans Sinhala', sans-serif;">
+        <p>🌿 කරපිංචා<br>🌿 කොහොඹ කොළ<br>🌿 උලුහාල්<br>🌿 ගොටුකොළ<br>🌿 මුකුණුවැන්න<br>🌿 දී කිරිදිය<br>🌿 නිල්
+          අවරිය<br>🌿 නෙල්ලි<br>🌿 තල</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        style="background:#f9f9f9; padding:20px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); line-height:1.8; font-size:1rem; font-family:'Noto Sans Sinhala', sans-serif;">
+        <p>🌿 කලුදුරු<br>🌿 තැබිලි තෙල්<br>🌿 කරාබු නැටි<br>🌿 පෙර කොළ<br>🌿 බුලත්<br>🌿 වද මල්<br>🌿 කොමාරිකා<br>🌿
+          පොල්<br>🌿 පොල් තෙල්<br>🌿 සැවැන්දරා</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
 
   <!-- Product Gallery -->
   <section>
@@ -237,16 +312,20 @@
   <section id="buy" style="text-align:center;">
     <h2>Get Your Natural Shine Herbal Hair Oil Today</h2>
     <p>Transform your hair care routine with the power of herbs. Order now and experience the difference!</p>
-    <a href="https://wa.me/94711907737?text=Hi%20I%20want%20to%20order%20Natural%20Shine%20Herbal%20Hair%20Oil" 
-       class="btn" target="_blank">Order via WhatsApp</a>
+    <a href="https://wa.me/94711907737?text=Hi%20I%20want%20to%20order%20Natural%20Shine%20Herbal%20Hair%20Oil"
+      class="btn" target="_blank">Order via WhatsApp</a>
+    <!-- Facebook Button -->
+    <a href="https://www.facebook.com/people/Natural-Shine-Herbal-Hair-Oil/61579279081300" target="_blank" class="btn fb-btn"
+      style="background:#1877f2; margin-top:15px;">
+      <i class="fab fa-facebook-f"></i> Follow on Facebook
+    </a>
   </section>
+
+
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Natural Shine Herbal Hair Oil | All Rights Reserved</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/people/Natural-Shine-Herbal-Hair-Oil/61579279081300" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    </div>
+    <p>© 2025 Natural Shine Herbal Hair Oil | All Rights Reserved</p> 
   </footer>
 
   <!-- JavaScript for Lightbox -->
@@ -275,4 +354,5 @@
   </script>
 
 </body>
+
 </html>
