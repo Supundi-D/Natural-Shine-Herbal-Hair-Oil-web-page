@@ -68,26 +68,52 @@
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform 0.3s;
+      cursor: pointer;
     }
     .gallery img:hover {
       transform: scale(1.05);
     }
-    .testimonials {
-      background: #f1f8e9;
-      padding: 50px 20px;
-      text-align: center;
+
+    /* ✅ Feedback Gallery */
+    .feedback-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
-    .testimonial {
-      max-width: 600px;
-      margin: 20px auto;
-      font-style: italic;
+    .feedback-gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s;
     }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
+    .feedback-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ✅ Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox:target {
+      display: flex;
     }
   </style>
 </head>
@@ -96,7 +122,6 @@
   <header>
     <h1>Natural Shine Herbal Hair Oil</h1>
     <p>For Stronger, Shinier & Healthier Hair – Naturally</p>
-    <!-- ✅ WhatsApp Contact -->
     <a href="https://wa.me/94771907737?text=Hi%20I%20am%20interested%20in%20buying%20Natural%20Shine%20Herbal%20Hair%20Oil" 
        class="btn" target="_blank">Buy Now on WhatsApp</a>
   </header>
@@ -120,7 +145,7 @@
     </div>
   </section>
 
-  <!-- ✅ Product Gallery -->
+  <!-- Product Gallery -->
   <section>
     <h2 style="text-align:center;">Our Herbal Hair Oil Bottles</h2>
     <div class="gallery">
@@ -129,23 +154,37 @@
     </div>
   </section>
 
-   <!-- Feedback Section -->
-   <section>
-    <h2 style="text-align:center;">Customer Feedback</h2>
-    <div class="gallery">
-      <img src="feedback1.jpeg" alt="Customer Feedback 1">
-      <img src="feedback2.jpeg" alt="Customer Feedback 2">
-      <img src="feedback3.jpeg" alt="Customer Feedback 3">
-      <img src="feedback4.jpeg" alt="Customer Feedback 4">
-    </div>
-  </section>
+  <!-- Feedback Section -->
+<section>
+  <h2 style="text-align:center;">Customer Feedback</h2>
+  <div class="feedback-gallery">
+    <a href="#img1"><img src="feedback1.jpeg" alt="Feedback 1"></a>
+    <a href="#img2"><img src="feedback2.jpeg" alt="Feedback 2"></a>
+    <a href="#img3"><img src="feedback3.jpeg" alt="Feedback 3"></a>
+    <a href="#img4"><img src="feedback4.jpeg" alt="Feedback 4"></a>
+  </div>
+</section>
+
+<!-- Lightboxes -->
+<div id="img1" class="lightbox">
+  <a href="#"><img src="feedback1.jpeg" alt="Feedback 1 Full"></a>
+</div>
+<div id="img2" class="lightbox">
+  <a href="#"><img src="feedback2.jpeg" alt="Feedback 2 Full"></a>
+</div>
+<div id="img3" class="lightbox">
+  <a href="#"><img src="feedback3.jpeg" alt="Feedback 3 Full"></a>
+</div>
+<div id="img4" class="lightbox">
+  <a href="#"><img src="feedback4.jpeg" alt="Feedback 4 Full"></a>
+</div>
+
 
 
   <!-- CTA Section -->
   <section id="buy" style="text-align:center;">
     <h2>Get Your Natural Shine Herbal Hair Oil Today</h2>
     <p>Transform your hair care routine with the power of herbs. Order now and experience the difference!</p>
-    <!-- ✅ WhatsApp Contact -->
     <a href="https://wa.me/94771907737?text=Hi%20I%20want%20to%20order%20Natural%20Shine%20Herbal%20Hair%20Oil" 
        class="btn" target="_blank">Order via WhatsApp</a>
   </section>
