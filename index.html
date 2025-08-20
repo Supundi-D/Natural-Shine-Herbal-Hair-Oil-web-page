@@ -8,9 +8,9 @@
 
   <!-- Font Awesome CDN for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-dT5A7NqZqW0KUo3QWb5u9c6rKqz5G4nA/UbA9q7xX7swV+hU6r6nB3TFTfGqV0BtlDQJ14YXW2q5mF3I6+8Xw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
 
   <style>
     /* General Styles */
@@ -51,11 +51,22 @@
       color: #fff;
       border-radius: 30px;
       font-weight: bold;
-      transition: 0.3s;
+      transition: 0.3s ease-in-out;
     }
 
     .btn:hover {
       background: #388e3c;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* FB button */
+    .fb-btn {
+      background: #1877f2;
+    }
+
+    .fb-btn:hover {
+      background: #145dbf;
     }
 
     /* Section */
@@ -67,6 +78,7 @@
 
     section h2 {
       margin-bottom: 40px;
+      font-weight: 600;
     }
 
     /* Features */
@@ -114,19 +126,6 @@
     .feedback-gallery img:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Testimonials */
-    .testimonials {
-      background: #f1f8e9;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .testimonial {
-      max-width: 600px;
-      margin: 20px auto;
-      font-style: italic;
     }
 
     /* Lightbox Overlay */
@@ -183,23 +182,25 @@
       }
     }
 
-    .promotional-text {
-      font-family: 'Noto Sans Sinhala', sans-serif;
-      font-size: 1rem;
-      line-height: 1.8;
-      max-width: 900px;
-      margin: auto;
-      background: #f9f9f9;
-      padding: 30px;
+    /* Ingredient & Price Cards */
+    .card {
+      background: #fff;
+      padding: 25px;
       border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .fb-btn:hover {
-      background: #145dbf;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
-
+    .sinhala-text {
+      font-family: 'Noto Sans Sinhala', sans-serif;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
 
     /* Footer */
     footer {
@@ -208,21 +209,6 @@
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-    }
-
-    .social-icons {
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      color: #fff;
-      font-size: 1.5rem;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #4caf50;
     }
   </style>
 </head>
@@ -241,15 +227,15 @@
   <section>
     <h2 style="text-align:center;">Why Choose Natural Shine?</h2>
     <div class="features">
-      <div>
+      <div class="card">
         <h3>🌿 100% Herbal</h3>
         <p>Blended with natural herbs and essential oils, free from harsh chemicals.</p>
       </div>
-      <div>
+      <div class="card">
         <h3>✨ Boosts Hair Growth</h3>
         <p>Strengthens roots, reduces hair fall & promotes faster growth.</p>
       </div>
-      <div>
+      <div class="card">
         <h3>💆 Deep Nourishment</h3>
         <p>Moisturizes the scalp, prevents dandruff & dryness, leaving hair silky.</p>
       </div>
@@ -258,29 +244,16 @@
 
   <!-- Ingredients Section -->
   <section>
-    <h2 style="text-align:center; margin-bottom:40px;">🌿 Ingredients Used 🌿</h2>
-    <div class="herbal-ingredients"
-      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: auto;">
-
-      <!-- Card 1 -->
-      <div
-        style="background:#f9f9f9; padding:20px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); line-height:1.8; font-size:1rem; font-family:'Noto Sans Sinhala', sans-serif;">
-        <p>🌿 කරපිංචා<br>🌿 කොහොඹ කොළ<br>🌿 උලුහාල්<br>🌿 ගොටුකොළ<br>🌿 මුකුණුවැන්න<br>🌿 දී කිරිදිය<br>🌿 නිල්
-          අවරිය<br>🌿 නෙල්ලි<br>🌿 තල</p>
+    <h2 style="text-align:center;">🌿 Ingredients Used 🌿</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: auto;">
+      <div class="card sinhala-text">
+        <p>🌿 කරපිංචා<br>🌿 කොහොඹ කොළ<br>🌿 උලුහාල්<br>🌿 ගොටුකොළ<br>🌿 මුකුණුවැන්න<br>🌿 දී කිරිදිය<br>🌿 නිල් අවරිය<br>🌿 නෙල්ලි<br>🌿 තල</p>
       </div>
-
-      <!-- Card 2 -->
-      <div
-        style="background:#f9f9f9; padding:20px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); line-height:1.8; font-size:1rem; font-family:'Noto Sans Sinhala', sans-serif;">
-        <p>🌿 කලුදුරු<br>🌿 තැබිලි තෙල්<br>🌿 කරාබු නැටි<br>🌿 පෙර කොළ<br>🌿 බුලත්<br>🌿 වද මල්<br>🌿 කොමාරිකා<br>🌿
-          පොල්<br>🌿 පොල් තෙල්<br>🌿 සැවැන්දරා</p>
+      <div class="card sinhala-text">
+        <p>🌿 කලුදුරු<br>🌿 තැබිලි තෙල්<br>🌿 කරාබු නැටි<br>🌿 පෙර කොළ<br>🌿 බුලත්<br>🌿 වද මල්<br>🌿 කොමාරිකා<br>🌿 පොල්<br>🌿 සැවැන්දරා</p>
       </div>
-
     </div>
   </section>
-
-
-
 
   <!-- Product Gallery -->
   <section>
@@ -309,56 +282,33 @@
   </div>
 
   <!-- Pricing Section -->
-<section style="padding:60px 20px; background:#fdfdfd; text-align:center;">
-  <h2 style="margin-bottom:40px;">💰 Price List</h2>
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; max-width:900px; margin:auto;">
-    
-    <!-- Card 1 -->
-    <div style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-      <h3>250 ML</h3>
-      <p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 1500.00</p>
+  <section style="text-align:center;">
+    <h2>💰 Price List</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; max-width:900px; margin:auto;">
+      <div class="card"><h3>250 ML</h3><p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 1500.00</p></div>
+      <div class="card"><h3>200 ML</h3><p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 1250.00</p></div>
+      <div class="card"><h3>100 ML</h3><p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 650.00</p></div>
     </div>
-
-    <!-- Card 2 -->
-    <div style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-      <h3>200 ML</h3>
-      <p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 1250.00</p>
+    <div style="margin-top:40px; font-size:1rem; line-height:1.6; color:#444;">
+      <p>🚚 Delivery Charges: <b>Rs. 350.00</b></p>
+      <p>🏠 If you can collect from me, <b>no need to pay for delivery</b>.</p>
     </div>
-
-    <!-- Card 3 -->
-    <div style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-      <h3>100 ML</h3>
-      <p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 650.00</p>
-    </div>
-
-  </div>
-
-  <!-- Delivery Info -->
-  <div style="margin-top:40px; font-size:1rem; line-height:1.6; color:#444;">
-    <p>🚚 Delivery Charges: <b>Rs. 350.00</b></p>
-    <p>🏠 If you can collect from me, <b>no need to pay for delivery</b>.</p>
-  </div>
-</section>
-
+  </section>
 
   <!-- CTA Section -->
   <section id="buy" style="text-align:center;">
     <h2>Get Your Natural Shine Herbal Hair Oil Today</h2>
     <p>Transform your hair care routine with the power of herbs. Order now and experience the difference!</p>
-    <a href="https://wa.me/94711907737?text=Hi%20I%20want%20to%20order%20Natural%20Shine%20Herbal%20Hair%20Oil"
-      class="btn" target="_blank">Order via WhatsApp</a>
-    <!-- Facebook Button -->
-    <a href="https://www.facebook.com/people/Natural-Shine-Herbal-Hair-Oil/61579279081300" target="_blank" class="btn fb-btn"
-      style="background:#1877f2; margin-top:15px;">
+    <a href="https://wa.me/94711907737?text=Hi%20I%20want%20to%20order%20Natural%20Shine%20Herbal%20Hair%20Oil" class="btn" target="_blank">Order via WhatsApp</a>
+    <br>
+    <a href="https://www.facebook.com/people/Natural-Shine-Herbal-Hair-Oil/61579279081300" target="_blank" class="btn fb-btn">
       <i class="fab fa-facebook-f"></i> Follow on Facebook
     </a>
   </section>
 
-
-
   <!-- Footer -->
   <footer>
-    <p>© 2025 Natural Shine Herbal Hair Oil | All Rights Reserved</p> 
+    <p>© 2025 Natural Shine Herbal Hair Oil | All Rights Reserved</p>
   </footer>
 
   <!-- JavaScript for Lightbox -->
@@ -385,7 +335,5 @@
       }
     });
   </script>
-
 </body>
-
 </html>
