@@ -22,6 +22,7 @@ header p {
 }
 
 /* Buttons */
+/* Base button */
 .btn {
   display: inline-block;
   padding: 12px 25px;
@@ -30,6 +31,9 @@ header p {
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
+  background: transparent; 
+  color: #fff;           
+
 }
 
 .btn.whatsapp {
