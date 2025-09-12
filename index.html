@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Natural Shine Herbal Hair Oil</title>
+  <meta name="description"
+    content="Natural Shine Herbal Hair Oil - 100% Herbal solution for stronger, shinier, and healthier hair. Shop now via WhatsApp, Facebook, or TikTok.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/jpeg">
 
   <!-- Font Awesome CDN for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -20,15 +25,23 @@
       line-height: 1.6;
       color: #333;
       scroll-behavior: smooth;
+      background: #fafafa;
     }
 
     a {
       text-decoration: none;
     }
 
-    /* Header / Hero Section */
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Header */
     header {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/oil3.jpeg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/oil3.jpeg') center/cover no-repeat;
       color: #fff;
       text-align: center;
       padding: 100px 20px;
@@ -36,17 +49,20 @@
 
     header h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     header p {
       font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
     }
 
+    /* Buttons */
     .btn {
       display: inline-block;
       padding: 12px 25px;
-      margin-top: 20px;
+      margin-top: 25px;
       background: #4caf50;
       color: #fff;
       border-radius: 30px;
@@ -57,7 +73,7 @@
     .btn:hover {
       background: #388e3c;
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     }
 
     /* FB button */
@@ -67,6 +83,15 @@
 
     .fb-btn:hover {
       background: #145dbf;
+    }
+
+    /* TikTok button */
+    .tiktok-btn {
+      background: #000;
+    }
+
+    .tiktok-btn:hover {
+      background: #444;
     }
 
     /* Section */
@@ -79,6 +104,9 @@
     section h2 {
       margin-bottom: 40px;
       font-weight: 600;
+      text-align: center;
+      font-size: 2rem;
+      color: #222;
     }
 
     /* Features */
@@ -89,17 +117,24 @@
       text-align: center;
     }
 
-    .features div {
-      background: #f9f9f9;
-      padding: 20px;
+    .card {
+      background: #fff;
+      padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .features div:hover {
+    .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Sinhala font */
+    .sinhala-text {
+      font-family: 'Noto Sans Sinhala', sans-serif;
+      line-height: 1.8;
+      font-size: 1rem;
     }
 
     /* Gallery */
@@ -117,7 +152,7 @@
       height: 250px;
       object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -125,7 +160,7 @@
     .gallery img:hover,
     .feedback-gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
     }
 
     /* Lightbox Overlay */
@@ -140,7 +175,6 @@
       background: rgba(0, 0, 0, 0.85);
       justify-content: center;
       align-items: center;
-      transition: opacity 0.4s;
     }
 
     .lightbox-overlay.show {
@@ -163,7 +197,6 @@
       color: #fff;
       cursor: pointer;
       font-weight: bold;
-      transition: color 0.2s;
     }
 
     .lightbox-overlay .close:hover {
@@ -182,33 +215,47 @@
       }
     }
 
-    /* Ingredient & Price Cards */
-    .card {
-      background: #fff;
+    /* Price Section */
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      justify-content: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .price-grid .card {
+      text-align: center;
       padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #4caf50;
     }
 
-    .sinhala-text {
-      font-family: 'Noto Sans Sinhala', sans-serif;
-      line-height: 1.8;
+
+    .delivery-note {
+      margin-top: 30px;
       font-size: 1rem;
+      color: #555;
+      text-align: center;
     }
 
     /* Footer */
     footer {
-      background: #222;
+      background: #111;
       color: #fff;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -223,9 +270,9 @@
       class="btn" target="_blank">Buy Now on WhatsApp</a>
   </header>
 
-    <!-- Features Section -->
-  <section style="background: #e8f5e9; border-radius: 15px; padding: 60px 20px; max-width: 1100px; margin: 40px auto;">
-    <h2 style="text-align:center;">Why Choose Natural Shine?</h2>
+  <!-- Features Section -->
+  <section style="background: #e8f5e9; border-radius: 15px;">
+    <h2>Why Choose Natural Shine?</h2>
     <div class="features">
       <div class="card">
         <h3>🌿 100% Herbal</h3>
@@ -242,23 +289,24 @@
     </div>
   </section>
 
-
   <!-- Ingredients Section -->
   <section>
-    <h2 style="text-align:center;">🌿 Ingredients Used 🌿</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: auto;">
+    <h2>🌿 Ingredients Used 🌿</h2>
+    <div class="features">
       <div class="card sinhala-text">
-        <p>🌿 කරපිංචා<br>🌿 කොහොඹ කොළ<br>🌿 උලුහාල්<br>🌿 ගොටුකොළ<br>🌿 මුකුණුවැන්න<br>🌿 දී කිරිදිය<br>🌿 නිල් අවරිය<br>🌿 නෙල්ලි<br>🌿 තල</p>
+        <p>🌿 කරපිංචා<br>🌿 කොහොඹ කොළ<br>🌿 උලුහාල්<br>🌿 ගොටුකොළ<br>🌿 මුකුණුවැන්න<br>🌿 දී කිරිදිය<br>🌿 නිල්
+          අවරිය<br>🌿 නෙල්ලි<br>🌿 තල</p>
       </div>
       <div class="card sinhala-text">
-        <p>🌿 කලුදුරු<br>🌿 තැබිලි තෙල්<br>🌿 කරාබු නැටි<br>🌿 පෙර කොළ<br>🌿 බුලත්<br>🌿 වද මල්<br>🌿 කොමාරිකා<br>🌿 පොල්<br>🌿 සැවැන්දරා</p>
+        <p>🌿 කලුදුරු<br>🌿 තැබිලි තෙල්<br>🌿 කරාබු නැටි<br>🌿 පෙර කොළ<br>🌿 බුලත්<br>🌿 වද මල්<br>🌿 කොමාරිකා<br>🌿
+          පොල්<br>🌿 සැවැන්දරා</p>
       </div>
     </div>
   </section>
 
   <!-- Product Gallery -->
   <section>
-    <h2 style="text-align:center;">Our Herbal Hair Oil Bottles</h2>
+    <h2>Our Herbal Hair Oil Bottles</h2>
     <div class="gallery">
       <img src="images/oil1.jpeg" alt="Natural Shine Hair Oil Bottle 1">
       <img src="images/oil2.jpeg" alt="Natural Shine Hair Oil Bottle 2">
@@ -269,7 +317,7 @@
 
   <!-- Feedback Section -->
   <section>
-    <h2 style="text-align:center;">Customer Feedback</h2>
+    <h2>Customer Feedback</h2>
     <div class="feedback-gallery">
       <img src="images/feedback1.jpeg" alt="Feedback 1">
       <img src="images/feedback2.jpeg" alt="Feedback 2">
@@ -296,32 +344,43 @@
   </div>
 
   <!-- Pricing Section -->
-  <section style="text-align:center;">
+  <section>
     <h2>💰 Price List</h2>
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; max-width:900px; margin:auto;">
-      <div class="card"><h3>250 ML</h3><p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 1500.00</p></div>
-      <div class="card"><h3>200 ML</h3><p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 1250.00</p></div>
-      <div class="card"><h3>100 ML</h3><p style="font-size:1.2rem; font-weight:bold; color:#4caf50;">Rs. 650.00</p></div>
+    <div class="price-grid">
+      <div class="card">
+        <h3>250 ML</h3>
+        <p class="price">Rs. 1500.00</p>
+      </div>
+      <div class="card">
+        <h3>200 ML</h3>
+        <p class="price">Rs. 1250.00</p>
+      </div>
+      <div class="card">
+        <h3>100 ML</h3>
+        <p class="price">Rs. 650.00</p>
+      </div>
     </div>
-    <div style="margin-top:40px; font-size:1rem; line-height:1.6; color:#444;">
+    <div class="delivery-note">
       <p>🚚 Delivery Charges: <b>Rs. 350.00</b></p>
-      <p>🏠 If you can collect from me, <b>no need to pay for delivery</b>.</p>
+      <p>🏠 Collect from me: <b>No delivery charge</b></p>
     </div>
   </section>
+
 
   <!-- CTA Section -->
   <section id="buy" style="text-align:center;">
     <h2>Get Your Natural Shine Herbal Hair Oil Today</h2>
     <p>Transform your hair care routine with the power of herbs. Order now and experience the difference!</p>
-    <a href="https://wa.me/94711907737?text=Hi%20I%20want%20to%20order%20Natural%20Shine%20Herbal%20Hair%20Oil" class="btn" target="_blank">Order via WhatsApp</a>
-    <br>
-    <a href="https://www.facebook.com/people/Natural-Shine-Herbal-Hair-Oil/61579279081300" target="_blank" class="btn fb-btn">
+    <a href="https://wa.me/94711907737?text=Hi%20I%20want%20to%20order%20Natural%20Shine%20Herbal%20Hair%20Oil"
+      class="btn" target="_blank">Order via WhatsApp</a>
+    <br><br>
+    <a href="https://www.facebook.com/people/Natural-Shine-Herbal-Hair-Oil/61579279081300" target="_blank"
+      class="btn fb-btn">
       <i class="fab fa-facebook-f"></i> Follow on Facebook
     </a>
-    <a href="https://www.tiktok.com/@herbalcare77?_t=ZS-8z9JJyuTsaP&_r=1" target="_blank" class="btn tiktok">
+    <a href="https://www.tiktok.com/@herbalcare77?_t=ZS-8z9JJyuTsaP&_r=1" target="_blank" class="btn tiktok-btn">
       <i class="fab fa-tiktok"></i> Follow on TikTok
     </a>
-    
   </section>
 
   <!-- Footer -->
@@ -354,4 +413,5 @@
     });
   </script>
 </body>
+
 </html>
