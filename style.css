@@ -5,6 +5,14 @@ body {
   color: #333;
   scroll-behavior: smooth;
   background: #fafafa;
+  
+  #svgImg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    transform: translate(1%, 1%)
+  }
 }
 
 a {

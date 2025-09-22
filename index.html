@@ -21,7 +21,9 @@
 
 </head>
 
-<body>
+<body onmousemove="onMouseMove(event)" style="height: 100vh; width: 100%;">
+
+  <img id="svgImg" src="SVG-image.svg" height="20px">
 
   <!-- Hero Section -->
   <header>
@@ -151,6 +153,17 @@
 
   <!-- JavaScript for Lightbox -->
   <script>
+
+const elem = document.getElementById('svgImg');
+
+function onMouseOver(e) {
+      console.log(e)
+    }
+
+    function onMouseMove(e) {
+      elem.style.paddingLeft = e.clientX + 'px';
+      elem.style.paddingTop = e.clientY + 'px';
+    }
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.querySelector('.lightbox-img');
     const feedbackImages = document.querySelectorAll('.feedback-gallery img');
